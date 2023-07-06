@@ -6,10 +6,10 @@ $conn = new mysqli("mysql", "admsql", "senhasql", "projetodb");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$result = $conn->query("SELECT nome, ocupacao FROM tb_pessoas"); // Incluímos a coluna "ocupacao" na consulta SQL
+$result = $conn->query("SELECT nome, ocupacao FROM tb_pessoas");
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<h3>" . $row["nome"] . " - " . $row["ocupacao"] . "</h3>"; // Exibimos o nome e a ocupação
+        echo "<h3>" . $row["nome"] . " - " . $row["ocupacao"] . "</h3>"; 
     }
 } else {
     echo "0 results";

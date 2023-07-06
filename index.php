@@ -14,5 +14,13 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+$result = $conn->query("SELECT ocupacao FROM tb_pessoas");
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<h3>" . $row["nome"] . "</h3>";
+    }
+} else {
+    echo "0 results";
+}
 $conn->close();
 ?>

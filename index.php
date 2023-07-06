@@ -1,9 +1,8 @@
 <?php
-echo "<h1>Openshift Workshop v2.0</h1> ";
-echo $_SERVER['SERVER_ADDR'];
+echo "<h1>TRABALHO REDHAT OPENSHIFT</h1> ";
 echo "<br><hr>";
 echo "<h2>Nomes cadastrados no Banco de Dados:</h2>";
-$conn = new mysqli("mysql", "redhat", "redhat", "workshop");
+$conn = new mysqli("mysql", "admsql", "senhasql", "projetodb");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
